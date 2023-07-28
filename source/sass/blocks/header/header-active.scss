@@ -1,0 +1,28 @@
+.header.is-active {
+  .nav {
+    display: block;
+  }
+
+  .bar span {
+    background-color: $color-default-elephant;
+    top: 11px;
+    transform: rotateZ(-45deg);
+  }
+
+  .bar span:nth-child(2) {
+    display: none;
+  }
+
+  .bar span:last-child {
+    top: 11px;
+    transform: rotateZ(45deg);
+  }
+
+  .header__phone {
+    color: $color-default-elephant;
+  }
+}
+
+.header.is-active + .entry::before {
+  content: '';
+}

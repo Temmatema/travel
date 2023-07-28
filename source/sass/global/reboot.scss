@@ -16,8 +16,8 @@ html {
   font-weight: 400;
   font-size: $fz-default;
   line-height: 24px;
-  font-family: $ff-placeholder;
-  color: $color-default-black;
+  font-family: $ff-montserrat;
+  color: $color-default-elephant;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,6 +32,16 @@ body {
   height: 100%;
 
   background-color: $color-default-white;
+  position: relative;
+  z-index: -4;
+}
+
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 
 a {
@@ -126,4 +136,17 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }

@@ -1,0 +1,85 @@
+.audio {
+  position: absolute;
+  background: rgba(245, 246, 250, 0.90);
+  width: 340px;
+  height: 220px;
+  padding: 40px;
+  right: 120px;
+  bottom: 0;
+  top: 23px;
+  margin: auto 0;
+
+  @include vp-1199 {
+    right: auto;
+    top: auto;
+    position: relative;
+    margin: 36px 0 0;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.audio h3 {
+  color: #1C3374;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 100%;
+  margin-bottom: 4px;
+}
+
+.audio button {
+  margin-bottom: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.audio__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+
+.audio__top-icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.audio p {
+  color: rgba(28, 51, 116, 0.48);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0;
+}
+
+.audio button {
+  width: auto;
+  height: auto;
+  padding: 0;
+}
+
+.audio__time {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.audio__time span {
+  color: #1C3374;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.audio__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.audio__buttons-main {
+  display: flex;
+  gap: 11px;
+}

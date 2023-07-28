@@ -1,0 +1,281 @@
+.entry::before {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  content: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.entry.swiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.entry .swiper-slide {
+  padding: 182px 120px 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background-color: #000000;
+    z-index: -2;
+  }
+
+  @include vp-1199 {
+    padding: 174px 45px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include vp-767 {
+    padding: 140px 15px 0;
+  }
+}
+
+.entry img {
+  position: absolute;
+  opacity: 0.8;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: none;
+  object-fit: cover;
+  height: 800px;
+
+  @include vp-1199 {
+    height: 100%;
+  }
+}
+
+.entry h1 {
+  font-size: 77px;
+  font-weight: 800;
+  line-height: 77px;
+  color: $color-default-white;
+  margin: 0 0 23px;
+  z-index: 3;
+  position: relative;
+
+  @include vp-1199 {
+    text-align: center;
+    font-size: 56px;
+    line-height: 56px;
+    margin-bottom: 13px;
+  }
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 30px
+  }
+}
+
+.entry p {
+  font-size: 17px;
+  line-height: 24px;
+  color: $color-default-white;
+  max-width: 464px;
+  margin-bottom: 36px;
+
+  @include vp-1199 {
+    text-align: center;
+    margin-bottom: 27px;
+  }
+
+  @include vp-767 {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 21px;
+  }
+}
+
+.entry button {
+  width: 220px;
+  height: 58px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: $color-default-white;
+  line-height: 16px;
+  background-color: $color-navy-blue;
+  margin-bottom: 150px;
+
+  @include vp-1199 {
+    width: 206px;
+    margin-bottom: 34px;
+  }
+
+  @include vp-767 {
+    width: 180px;
+    height: 52px;
+    margin-bottom: 0;
+  }
+}
+
+.entry__specs {
+  display: flex;
+  gap: 10px;
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.entry__block {
+  display: flex;
+  height: 44px;
+  padding: 14px 19px;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.50);
+}
+
+.entry__block p {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.entry__block svg {
+  align-self: center;
+}
+
+.entry__video {
+  right: 120px;
+  bottom: 182px;
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  width: 482px;
+  height: 317px;
+
+  @include vp-1199 {
+    right: 0;
+    left: 0;
+    position: relative;
+    width: 442px;
+    height: 300px;
+    bottom: auto;
+    margin: 16px auto 0;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.entry__video iframe {
+  border: none;
+}
+
+.entry__video button {
+  position: absolute;
+  padding: 0;
+  background-color: transparent;
+  width: 56px;
+  height: 56px;
+  left: 0;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.entry__video img {
+  position: absolute;
+  height: 317px;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  @include vp-1199 {
+    height: 300px;
+  }
+}
+
+.entry__video.is-play {
+  img {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+}
+
+.entry__img {
+  position: absolute;
+  width: 410px;
+  height: 459px;
+  top: 202px;
+  z-index: 0;
+  right: 120px;
+
+  img {
+    opacity: 1;
+    height: 459px;
+  }
+
+  @include vp-1199 {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 442px;
+    height: auto;
+
+    img {
+      height: 365px;
+    }
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.entry .swiper__pagination {
+  display: flex;
+  position: absolute;
+  padding-right: 116px;
+  padding-bottom: 87px;
+  justify-content: flex-end;
+  gap: 7px;
+
+  @include vp-1199 {
+    justify-content: center;
+    padding-bottom: 80px;
+    padding-right: 0;
+  }
+
+  @include vp-767 {
+    padding-bottom: 30px;
+    gap: 4px;
+  }
+}
+
+.entry .swiper-pagination-bullet {
+  background-color: transparent;
+  border: 1px white solid;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.entry .swiper-pagination-bullet-active {
+  background-color: white;
+}

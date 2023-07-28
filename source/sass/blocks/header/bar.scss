@@ -1,0 +1,34 @@
+.bar {
+  display: none;
+  width: 26px;
+  height: 26px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  order: -1;
+  padding: 3px 0;
+  position: relative;
+
+  @include vp-1199 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+.bar span {
+  width: 100%;
+  height: 0.15rem;
+  background-color: white;
+  position: absolute;
+  left: 0;
+}
+
+.bar span:nth-child(2) {
+  width: 17px;
+  top: 11px;
+}
+
+.bar span:last-child {
+  bottom: 5px;
+}

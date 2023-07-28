@@ -1,0 +1,296 @@
+.training {
+  padding-bottom: 100px;
+
+  @include vp-1199 {
+    padding-bottom: 91px;
+  }
+}
+
+.training .swiper {
+  padding: 35px 20px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  max-width: 1420px;
+
+  @media (max-width: 1600px) {
+    max-width: 1240px;
+    width: 86.11vw;
+  }
+
+  @include vp-1199 {
+    padding: 24px 20px;
+    width: 720px;
+    margin-bottom: 19px;
+  }
+
+  @include vp-767 {
+    width: 320px;
+    padding: 24px 15px;
+    margin-bottom: 14px;
+  }
+}
+
+.training h2 {
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 35px;
+  margin-bottom: 32px;
+  position: relative;
+  @include font-background('Обучение');
+
+  @include vp-1199 {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 21px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+}
+
+.training p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: $color-default-elephant;
+  padding-right: 390px;
+  margin-bottom: 49px;
+
+  @include vp-1199 {
+    padding-right: 140px;
+    margin-bottom: 57px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    padding-right: 0;
+    line-height: 20px;
+    margin-bottom: 38px;
+  }
+}
+
+.training__inner-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.training h3 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.training__buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.training__buttons button {
+  display: flex;
+}
+
+.training__next-btn {
+  transform: rotateZ(180deg);
+}
+
+.training__list {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::before {
+    content: '';
+    left: -18vw;
+    position: absolute;
+    width: 120vw;
+    height: 1px;
+    background-color: $color-navy-blue;
+    opacity: 0.2;
+    bottom: -34px;
+  }
+
+  @include vp-1199 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-content: flex-start;
+    column-gap: 30px;
+    row-gap: 90px;
+
+    &::before {
+      left: 0;
+      width: 47.96vw;
+      top: 61px;
+    }
+
+    &::after {
+      content: '';
+      left: 0;
+      position: absolute;
+      width: 47.96vw;
+      height: 1px;
+      background-color: $color-navy-blue;
+      opacity: 0.2;
+      bottom: 61px;
+    }
+  }
+
+  @include vp-767 {
+    &::before {
+      width: 51vw;
+    }
+
+    &::after {
+
+      width: 51vw;
+    }
+  }
+
+  @media (max-width: 610px) {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    &::before {
+      width: 1px;
+      height: 196px;
+      top: 10px;
+      left: 10px;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.training__inner-title {
+  margin-bottom: 40px;
+
+  @media (max-width: 610px) {
+    padding-left: 4px;
+    margin-bottom: 28px;
+  }
+}
+
+.training__item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 278px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: $color-navy-blue;
+    border-radius: 50%;
+    bottom: -41px;
+  }
+
+  @include vp-1199 {
+    &::before {
+      bottom: -25px;
+    }
+  }
+
+  @media (max-width: 610px) {
+    padding-left: 36px;
+    gap: 13px;
+
+    &::before {
+      left: 4px;
+      bottom: auto;
+    }
+  }
+}
+
+.training__item p {
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+
+  @include vp-1199 {
+    font-size: 14px;
+    line-height: 22px
+  }
+
+  @media (max-width: 610px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.training__item svg {
+  @media (max-width: 610px) {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+.item-mountain {
+  grid-row: 2/3;
+  grid-column: 1/2;
+
+  @include vp-1199 {
+    &::before {
+      top: -25px;
+    }
+  }
+
+  @media (max-width: 610px) {
+    &::before {
+      top: auto;
+    }
+  }
+}
+
+.item-pins {
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+  @include vp-1199 {
+    &::before {
+      top: -25px;
+    }
+
+    &::after {
+      content: '';
+      left: 7px;
+      position: absolute;
+      width: 1px;
+      height: 53px;
+      background-color: #0266c1;
+      opacity: .2;
+      top: -76px;
+    }
+  }
+
+  @media (max-width: 610px) {
+    &::before {
+      top: auto;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+}

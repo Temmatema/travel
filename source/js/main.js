@@ -1,6 +1,15 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import './modules/main-swiper.js';
+import './modules/tour-swiper.js';
+import './modules/instructors-swiper.js';
+import './modules/video-handle.js';
+import './modules/audio-handler.js';
+import './modules/header-toggle.js';
+import './modules/reviews-swiper.js';
+import './modules/features-swiper.js';
+import './modules/gallery-swiper.js';
 
 // ---------------------------------
 

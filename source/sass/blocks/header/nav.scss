@@ -1,0 +1,45 @@
+.nav {
+  @include vp-1199 {
+    order: -1;
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    left: 0;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.nav__list {
+  display: flex;
+  gap: 1.97rem;
+
+  @include vp-1199 {
+    flex-direction: column;
+    padding: 122px 45px 65px;
+    gap: 18px;
+  }
+
+  @include vp-767 {
+    padding: 95px 15px 44px;
+    gap: 12px;
+  }
+}
+
+.nav__item a {
+  font-size: 16px;
+  font-weight: 400;
+
+  @include vp-1199 {
+    color: #2D383F;
+    text-transform: uppercase;
+    letter-spacing: 0.64px;
+    font-weight: 700;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    letter-spacing: 0.56px;
+  }
+}
