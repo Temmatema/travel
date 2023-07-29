@@ -22,4 +22,3 @@ const swiper = new Swiper('.training__swiper', {
     },
   },
 });
-

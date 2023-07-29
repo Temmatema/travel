@@ -44,14 +44,14 @@
   @include vp-767 {
     display: flex;
     flex-direction: column;
-    gap: 0.958rem;
+    gap: 0.96rem;
     align-items: center;
   }
 }
 
 .features .swiper-slide {
   width: 380px;
-  border: 1px solid rgba(2, 102, 193, 0.10);
+  border: 1px solid rgba(2, 102, 193, 0.1);
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
@@ -82,7 +82,7 @@
   margin-bottom: 47px;
   position: relative;
 
-  @include font-background('Преимущества');
+  @include font-background("Преимущества");
 
   &::before {
     right: 0;
@@ -154,7 +154,7 @@
 
   @include vp-1199 {
     font-size: 12px;
-    line-height: 18px
+    line-height: 18px;
   }
 }
 
@@ -181,6 +181,7 @@
 
 .features__buttons button:hover {
   outline: 1px $color-active solid;
+
   svg {
     color: $color-default-white;
     fill: $color-active;
@@ -189,6 +190,7 @@
 
 .features__buttons button:focus {
   outline: 1px $color-active solid;
+
   svg {
     color: $color-default-white;
     fill: $color-active;

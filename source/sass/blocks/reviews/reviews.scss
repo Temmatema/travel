@@ -22,7 +22,7 @@
   align-self: end;
   position: relative;
 
-  @include font-background('Отзывы');
+  @include font-background("Отзывы");
 
   @include vp-1199 {
     font-size: 25px;
@@ -72,6 +72,7 @@
 
 .reviews__buttons button:hover {
   outline: 1px $color-active solid;
+
   svg {
     color: $color-default-white;
     fill: $color-active;
@@ -80,6 +81,7 @@
 
 .reviews__buttons button:focus {
   outline: 1px $color-active solid;
+
   svg {
     color: $color-default-white;
     fill: $color-active;

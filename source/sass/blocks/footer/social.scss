@@ -23,6 +23,7 @@
 
 .social a:focus {
   outline: none;
+
   rect {
     stroke: #000000;
     opacity: 1;
@@ -40,6 +41,6 @@
   }
 
   path {
-    fill: white;
+    fill: #ffffff;
   }
 }

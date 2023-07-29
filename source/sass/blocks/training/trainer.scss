@@ -1,7 +1,7 @@
 .trainer {
   max-width: 278px;
   height: 377px;
-  box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.10);
+  box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
   position: relative;
 
   @include vp-1199 {
@@ -85,6 +85,7 @@
 
 .trainer__top-info a:focus {
   outline: none;
+
   rect {
     stroke: #000000;
     stroke-opacity: 1;
@@ -102,6 +103,6 @@
   }
 
   path {
-    fill: white;
+    fill: #ffffff;
   }
 }

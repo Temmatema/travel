@@ -37,7 +37,7 @@
   position: relative;
   margin-bottom: 22px;
 
-  @include font-background('Контакты');
+  @include font-background("Контакты");
 
   @include vp-1199 {
     font-size: 25px;

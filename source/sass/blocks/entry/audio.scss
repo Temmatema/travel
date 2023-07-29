@@ -1,6 +1,6 @@
 .audio {
   position: absolute;
-  background: rgba(245, 246, 250, 0.90);
+  background: rgba(245, 246, 250, 0.9);
   width: 340px;
   height: 220px;
   padding: 40px;
@@ -22,7 +22,7 @@
 }
 
 .audio h3 {
-  color: #1C3374;
+  color: #1c3374;
   font-size: 22px;
   font-weight: 400;
   line-height: 100%;
@@ -33,6 +33,9 @@
   margin-bottom: 0;
   background-color: transparent;
   cursor: pointer;
+  width: auto;
+  height: auto;
+  padding: 0;
 }
 
 .audio__top {
@@ -55,12 +58,6 @@
   margin-bottom: 0;
 }
 
-.audio button {
-  width: auto;
-  height: auto;
-  padding: 0;
-}
-
 .audio__time {
   display: flex;
   justify-content: space-between;
@@ -68,7 +65,7 @@
 }
 
 .audio__time span {
-  color: #1C3374;
+  color: #1c3374;
   font-size: 10px;
   font-weight: 400;
   line-height: normal;

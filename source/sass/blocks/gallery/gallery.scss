@@ -24,7 +24,7 @@
   position: relative;
   margin-bottom: 22px;
 
-  @include font-background('Фотогалерея');
+  @include font-background("Фотогалерея");
 
   @include vp-1199 {
     font-size: 25px;
@@ -86,6 +86,7 @@
 
 .gallery__buttons button:hover {
   outline: 1px $color-active solid;
+
   svg {
     color: $color-default-white;
     fill: $color-active;
@@ -94,6 +95,7 @@
 
 .gallery__buttons button:focus {
   outline: 1px $color-active solid;
+
   svg {
     color: $color-default-white;
     fill: $color-active;
@@ -125,7 +127,7 @@
   }
 }
 
-.gallery .slide-even{
+.gallery .slide-even {
   display: flex;
   flex-direction: column;
   min-width: 298px;

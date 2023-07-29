@@ -29,7 +29,7 @@
 }
 
 .tour-card h3::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -17px;
@@ -38,7 +38,9 @@
   height: 1px;
 }
 
-.tour-card h3,p,span {
+.tour-card h3,
+p,
+span {
   color: $color-default-white;
 }
 
@@ -50,7 +52,7 @@
 .tour-card__top p {
   font-size: 12px;
   font-weight: 500;
-  line-height: 12px
+  line-height: 12px;
 }
 
 .tour-card__wrap {

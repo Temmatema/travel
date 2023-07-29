@@ -36,7 +36,8 @@
   line-height: 35px;
   margin-bottom: 32px;
   position: relative;
-  @include font-background('Обучение');
+
+  @include font-background("Обучение");
 
   @include vp-1199 {
     font-size: 25px;
@@ -112,6 +113,7 @@
 
 .training__buttons button:hover {
   outline: 1px $color-active solid;
+
   svg {
     color: $color-default-white;
     fill: $color-active;
@@ -120,6 +122,7 @@
 
 .training__buttons button:focus {
   outline: 1px $color-active solid;
+
   svg {
     color: $color-default-white;
     fill: $color-active;
@@ -143,7 +146,7 @@
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     left: -18vw;
     position: absolute;
     width: 120vw;
@@ -168,7 +171,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       left: 0;
       position: absolute;
       width: 47.96vw;
@@ -226,7 +229,7 @@
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     width: 14px;
     height: 14px;
     background-color: $color-navy-blue;
@@ -259,7 +262,7 @@
 
   @include vp-1199 {
     font-size: 14px;
-    line-height: 22px
+    line-height: 22px;
   }
 
   @media (max-width: 610px) {
@@ -302,13 +305,13 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       left: 7px;
       position: absolute;
       width: 1px;
       height: 53px;
       background-color: #0266c1;
-      opacity: .2;
+      opacity: 0.2;
       top: -76px;
     }
   }

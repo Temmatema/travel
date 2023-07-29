@@ -43,7 +43,7 @@
   margin-bottom: 30px;
   position: relative;
 
-  @include font-background('О нас');
+  @include font-background("О нас");
 
   @include vp-1199 {
     font-size: 25px;
