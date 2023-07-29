@@ -46,6 +46,7 @@
   line-height: 16px;
   margin: 0;
   padding: 0;
+  color: $color-default-elephant;
 
   @include vp-1199 {
     line-height: 18px;
@@ -70,6 +71,7 @@
   font-weight: 700;
   line-height: 16px;
   margin: 0;
+  color: $color-default-elephant;
 }
 
 .trainer__top-info a {
