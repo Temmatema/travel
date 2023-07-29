@@ -75,3 +75,33 @@
 .trainer__top-info a {
   display: flex;
 }
+
+.trainer__top-info a:hover {
+  rect {
+    stroke: #000000;
+    stroke-opacity: 1;
+  }
+}
+
+.trainer__top-info a:focus {
+  outline: none;
+  rect {
+    stroke: #000000;
+    stroke-opacity: 1;
+  }
+}
+
+.trainer__top-info a:active {
+  svg {
+    fill: $color-navy-blue;
+  }
+
+  rect {
+    stroke: $color-navy-blue;
+    stroke-opacity: 1;
+  }
+
+  path {
+    fill: white;
+  }
+}

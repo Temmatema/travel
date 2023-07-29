@@ -99,7 +99,7 @@
   }
 }
 
-.entry button {
+.entry__btn {
   width: 220px;
   height: 58px;
   border: none;
@@ -109,6 +109,25 @@
   line-height: 16px;
   background-color: $color-navy-blue;
   margin-bottom: 150px;
+
+  &:hover {
+    background-color: $color-default-white;
+    color: $color-default-elephant;
+    border: 1px $color-default-elephant solid;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $color-default-white;
+    color: $color-default-elephant;
+    border: 1px $color-default-elephant solid;
+  }
+
+  &:active {
+    background-color: $color-active;
+    color: $color-default-white;
+    border: 1px $color-default-elephant solid;
+  }
 
   @include vp-1199 {
     width: 206px;
@@ -188,6 +207,44 @@
   top: 0;
   bottom: 0;
   margin: auto;
+}
+
+.entry__video button:hover {
+  circle {
+    stroke: $color-active;
+  }
+
+  path {
+    stroke: $color-default-elephant;
+  }
+}
+
+.entry__video button:focus {
+  outline: none;
+
+  circle {
+    stroke: $color-active;
+  }
+
+  path {
+    stroke: $color-default-elephant;
+  }
+}
+
+.entry__video button:active {
+  svg {
+    fill: $color-active;
+    opacity: 1;
+  }
+
+  circle {
+    fill-opacity: 1;
+    stroke: $color-active;
+  }
+
+  path {
+    stroke: $color-default-white;
+  }
 }
 
 .entry__video img {

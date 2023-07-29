@@ -3,6 +3,24 @@
     display: block;
   }
 
+  .nav a {
+    &:hover {
+      &::before {
+        background-color: $color-default-elephant;
+      }
+    }
+
+    &:focus {
+      outline: 1px $color-default-elephant solid;
+    }
+
+    &:active {
+      &::before {
+        background-color: transparent;
+      }
+    }
+  }
+
   .bar span {
     background-color: $color-default-elephant;
     top: 11px;

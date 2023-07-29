@@ -1,0 +1,178 @@
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 31px;
+  padding-bottom: 30px;
+  border-top: 1px rgba(45, 56, 63, 0.2) solid;
+
+  @include vp-1199 {
+    padding-top: 43px;
+    padding-bottom: 40px;
+  }
+
+  @include vp-767 {
+    padding: 30px 20px;
+  }
+}
+
+.footer .container > p {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%;
+  color: $color-default-elephant;
+  text-align: center;
+
+  @include vp-767 {
+    text-align: start;
+  }
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+
+  @include vp-1199 {
+    align-items: flex-start;
+    margin-bottom: 38px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    margin-bottom: 26px;
+  }
+}
+
+.footer__logo {
+  display: flex;
+
+  @include vp-767 {
+    margin-bottom: 14px;
+  }
+}
+
+.footer__logo svg {
+  @include vp-1199 {
+    width: 118px;
+    height: 34px;
+  }
+
+  @include vp-767 {
+    width: 112px;
+  }
+}
+
+.footer__list {
+  display: flex;
+  gap: 33px;
+
+  @include vp-1440 {
+    padding-right: 65px;
+  }
+
+  @media (max-width: 1340px) {
+    padding: 0;
+  }
+
+  @include vp-1199 {
+    padding-right: 6px;
+    gap: 21px;
+  }
+
+  @include vp-767 {
+    padding-right: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 5px;
+    width: 100%;
+  }
+}
+
+.footer__list a {
+  font-size: 16px;
+  line-height: 16px;
+  padding: 10px 0;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    bottom: 6px;
+    transition: background-color 0.2s ease;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $color-default-elephant;
+    }
+  }
+
+  &:focus {
+    outline: 1px $color-default-elephant solid;
+  }
+
+  &:active {
+    &::before {
+      background-color: transparent;
+    }
+  }
+
+  @include vp-1199 {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.footer__phone {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  transition: color 0.1s ease;
+
+  &:hover {
+    color: $color-active;
+  }
+
+  &:focus {
+    outline: none;
+    color: $color-active;
+  }
+
+  &:active {
+    color: $color-navy-blue;
+  }
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.item-1 {
+  order: 3;
+
+  @include vp-767 {
+    order: initial;
+  }
+}
+
+.item-3 {
+  order: 4;
+
+  @include vp-767 {
+    order: initial;
+  }
+}
+
+.item-5 {
+  order: 5;
+
+  @include vp-767 {
+    order: initial;
+  }
+}

@@ -1,0 +1,20 @@
+.map {
+  width: 585px;
+  height: 324px;
+  background-image: url("../../../img/map.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  span {
+    color: black;
+  }
+
+  @include vp-1199 {
+    width: 100%;
+    height: 340px;
+  }
+
+  @include vp-767 {
+    height: 320px;
+  }
+}

@@ -102,6 +102,35 @@
 
 .training__buttons button {
   display: flex;
+
+  svg {
+    color: $color-navy-blue;
+    fill: $color-default-white;
+    transition: all 0.1s ease-in-out;
+  }
+}
+
+.training__buttons button:hover {
+  outline: 1px $color-active solid;
+  svg {
+    color: $color-default-white;
+    fill: $color-active;
+  }
+}
+
+.training__buttons button:focus {
+  outline: 1px $color-active solid;
+  svg {
+    color: $color-default-white;
+    fill: $color-active;
+  }
+}
+
+.training__buttons button:active {
+  svg {
+    color: $color-active;
+    fill: $color-default-white;
+  }
 }
 
 .training__next-btn {

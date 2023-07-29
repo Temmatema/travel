@@ -10,6 +10,7 @@ import './modules/header-toggle.js';
 import './modules/reviews-swiper.js';
 import './modules/features-swiper.js';
 import './modules/gallery-swiper.js';
+import './modules/map.js';
 
 // ---------------------------------
 

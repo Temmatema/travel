@@ -62,6 +62,35 @@
 
 .reviews__buttons button {
   display: flex;
+
+  svg {
+    color: $color-navy-blue;
+    fill: $color-default-white;
+    transition: all 0.1s ease-in-out;
+  }
+}
+
+.reviews__buttons button:hover {
+  outline: 1px $color-active solid;
+  svg {
+    color: $color-default-white;
+    fill: $color-active;
+  }
+}
+
+.reviews__buttons button:focus {
+  outline: 1px $color-active solid;
+  svg {
+    color: $color-default-white;
+    fill: $color-active;
+  }
+}
+
+.reviews__buttons button:active {
+  svg {
+    color: $color-active;
+    fill: $color-default-white;
+  }
 }
 
 .reviews__next-btn {
