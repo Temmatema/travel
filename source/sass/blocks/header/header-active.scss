@@ -3,7 +3,9 @@
     display: block;
   }
 
-  .nav a {
+  .nav__link {
+    color: $color-default-elephant;
+
     &:hover {
       &::before {
         background-color: $color-default-elephant;
@@ -21,17 +23,17 @@
     }
   }
 
-  .bar span {
+  .bar__row {
     background-color: $color-default-elephant;
     top: 11px;
     transform: rotateZ(-45deg);
   }
 
-  .bar span:nth-child(2) {
+  .bar__row-2 {
     display: none;
   }
 
-  .bar span:last-child {
+  .bar__row-3 {
     top: 11px;
     transform: rotateZ(45deg);
   }

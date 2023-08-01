@@ -74,18 +74,18 @@
   color: $color-default-elephant;
 }
 
-.trainer__top-info a {
+.trainer__link {
   display: flex;
 }
 
-.trainer__top-info a:hover {
+.trainer__link:hover {
   rect {
     stroke: #000000;
     stroke-opacity: 1;
   }
 }
 
-.trainer__top-info a:focus {
+.trainer__link:focus {
   outline: none;
 
   rect {
@@ -94,7 +94,7 @@
   }
 }
 
-.trainer__top-info a:active {
+.trainer__link:active {
   svg {
     fill: $color-navy-blue;
   }

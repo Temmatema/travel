@@ -113,7 +113,7 @@
   }
 }
 
-.features svg {
+.features .swiper-slide svg {
   margin-bottom: 29px;
 
   @include vp-1199 {
@@ -166,44 +166,4 @@
   @include vp-1199 {
     display: none;
   }
-}
-
-.features__buttons button {
-  display: flex;
-
-  svg {
-    margin: 0;
-    color: $color-navy-blue;
-    fill: $color-default-white;
-    transition: all 0.1s ease-in-out;
-  }
-}
-
-.features__buttons button:hover {
-  outline: 1px $color-active solid;
-
-  svg {
-    color: $color-default-white;
-    fill: $color-active;
-  }
-}
-
-.features__buttons button:focus {
-  outline: 1px $color-active solid;
-
-  svg {
-    color: $color-default-white;
-    fill: $color-active;
-  }
-}
-
-.features__buttons button:active {
-  svg {
-    color: $color-active;
-    fill: $color-default-white;
-  }
-}
-
-.features__next-btn {
-  transform: rotateZ(180deg);
 }

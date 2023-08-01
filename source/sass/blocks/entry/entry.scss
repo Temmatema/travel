@@ -110,25 +110,6 @@
   background-color: $color-navy-blue;
   margin-bottom: 150px;
 
-  &:hover {
-    background-color: $color-default-white;
-    color: $color-default-elephant;
-    border: 1px $color-default-elephant solid;
-  }
-
-  &:focus {
-    outline: none;
-    background-color: $color-default-white;
-    color: $color-default-elephant;
-    border: 1px $color-default-elephant solid;
-  }
-
-  &:active {
-    background-color: $color-active;
-    color: $color-default-white;
-    border: 1px $color-default-elephant solid;
-  }
-
   @include vp-1199 {
     width: 206px;
     margin-bottom: 34px;
@@ -195,7 +176,7 @@
   border: none;
 }
 
-.entry__video button {
+.entry__video-btn {
   position: absolute;
   padding: 0;
   background-color: transparent;
@@ -209,7 +190,7 @@
   margin: auto;
 }
 
-.entry__video button:hover {
+.entry__video-btn:hover {
   circle {
     stroke: $color-active;
   }
@@ -219,7 +200,7 @@
   }
 }
 
-.entry__video button:focus {
+.entry__video-btn:focus {
   outline: none;
 
   circle {
@@ -231,7 +212,7 @@
   }
 }
 
-.entry__video button:active {
+.entry__video-btn:active {
   svg {
     fill: $color-active;
     opacity: 1;

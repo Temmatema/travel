@@ -11,4 +11,23 @@
     opacity: 0.5;
     pointer-events: none;
   }
+
+  &:hover {
+    background-color: $color-default-white;
+    color: $color-default-elephant;
+    border: 1px $color-default-elephant solid;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $color-default-white;
+    color: $color-default-elephant;
+    border: 1px $color-default-elephant solid;
+  }
+
+  &:active {
+    background-color: $color-active;
+    color: $color-default-white;
+    border: 1px $color-default-elephant solid;
+  }
 }

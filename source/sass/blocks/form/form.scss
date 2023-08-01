@@ -155,25 +155,6 @@
   font-weight: 500;
   color: $color-default-white;
 
-  &:hover {
-    background-color: $color-default-white;
-    color: $color-default-elephant;
-    border: 1px $color-default-elephant solid;
-  }
-
-  &:focus {
-    outline: none;
-    background-color: $color-default-white;
-    color: $color-default-elephant;
-    border: 1px $color-default-elephant solid;
-  }
-
-  &:active {
-    background-color: $color-active;
-    color: $color-default-white;
-    border: 1px $color-default-elephant solid;
-  }
-
   @include vp-1199 {
     width: 266px;
     height: 58px;
