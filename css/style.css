@@ -3289,7 +3289,7 @@ span {
 .map {
   width: 585px;
   height: 324px;
-  background-image: url("../img/map.jpg");
+  background-image: url("./img/map.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
