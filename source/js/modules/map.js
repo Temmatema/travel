@@ -7,7 +7,7 @@ if (document.getElementById('map')) {
   }).addTo(map);
 
   let mapIcon = L.icon({
-    iconUrl: '../img/map-marker-png.png',
+    iconUrl: '../img/map-marker.svg',
     iconSize: [48, 48],
   });
 
