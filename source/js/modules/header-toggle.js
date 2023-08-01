@@ -2,7 +2,7 @@ const barBtn = document.querySelector('.bar');
 const header = document.querySelector('.header');
 const headerIcon = document.querySelector('.header-icon');
 
-if (barBtn) {
+if (barBtn && header && headerIcon) {
   barBtn.addEventListener('click', () => {
     header.classList.toggle('is-active');
 

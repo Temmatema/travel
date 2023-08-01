@@ -49,7 +49,7 @@
   }
 }
 
-.features .swiper-slide {
+.features__slide {
   width: 380px;
   border: 1px solid rgba(2, 102, 193, 0.1);
   padding: 40px 20px;
@@ -68,7 +68,7 @@
   }
 }
 
-.features .swiper-slide:last-of-type {
+.features__slide:last-of-type {
   @include vp-1199 {
     grid-column: 1/3;
   }
@@ -113,7 +113,7 @@
   }
 }
 
-.features .swiper-slide svg {
+.features__slide svg {
   margin-bottom: 29px;
 
   @include vp-1199 {
