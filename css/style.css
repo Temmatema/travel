@@ -2285,6 +2285,7 @@ button {
   line-height: 28px;
   margin-bottom: 37px;
   position: relative;
+  color: #ffffff;
 }
 
 .tour-card h3::before {
@@ -2295,12 +2296,6 @@ button {
   width: 80px;
   background-color: rgba(255, 255, 255, 0.2);
   height: 1px;
-}
-
-.tour-card h3,
-p,
-span {
-  color: #ffffff;
 }
 
 .tour-card__top {
@@ -2316,6 +2311,7 @@ span {
   font-size: 12px;
   font-weight: 500;
   line-height: 12px;
+  color: #ffffff;
 }
 
 .tour-card__wrap {
@@ -2370,12 +2366,14 @@ span {
   font-size: 12px;
   font-weight: 300;
   line-height: 100%;
+  color: #ffffff;
 }
 
 .tour-card__stats span {
   font-size: 13px;
   font-weight: 700;
   line-height: 13px;
+  color: #ffffff;
 }
 
 .tour-card img {
@@ -2456,7 +2454,7 @@ span {
   z-index: -1;
 }
 
-.training .container > p {
+.training__container > p {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -2875,7 +2873,7 @@ span {
   margin-bottom: 50px;
 }
 
-.features .swiper-slide {
+.features__slide {
   width: 380px;
   border: 1px solid rgba(2, 102, 193, 0.1);
   padding: 40px 20px;
@@ -2920,7 +2918,7 @@ span {
   margin: 0 auto;
 }
 
-.features .swiper-slide svg {
+.features__slide svg {
   margin-bottom: 29px;
 }
 
@@ -3311,7 +3309,7 @@ span {
   border-top: 1px rgba(45, 56, 63, 0.2) solid;
 }
 
-.footer .container > p {
+.footer__container > p {
   font-size: 12px;
   font-style: normal;
   font-weight: 300;
@@ -3714,7 +3712,7 @@ span {
     margin-bottom: 21px;
   }
 
-  .training .container > p {
+  .training__container > p {
     padding-right: 140px;
     margin-bottom: 57px;
   }
@@ -3911,12 +3909,12 @@ span {
     justify-items: center;
   }
 
-  .features .swiper-slide {
+  .features__slide {
     width: 324px;
     padding: 29px 20px;
   }
 
-  .features .swiper-slide:last-of-type {
+  .features__slide:last-of-type {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1/3;
@@ -3938,7 +3936,7 @@ span {
     width: 336px;
   }
 
-  .features .swiper-slide svg {
+  .features__slide svg {
     width: 48px;
     height: 48px;
     margin-bottom: 25px;
@@ -4380,7 +4378,7 @@ span {
     margin-bottom: 16px;
   }
 
-  .training .container > p {
+  .training__container > p {
     font-size: 14px;
     padding-right: 0;
     line-height: 20px;
@@ -4526,7 +4524,7 @@ span {
     align-items: center;
   }
 
-  .features .swiper-slide {
+  .features__slide {
     width: 290px;
     padding: 19px 10px;
   }
@@ -4548,7 +4546,7 @@ span {
     width: 218px;
   }
 
-  .features .swiper-slide svg {
+  .features__slide svg {
     width: 42px;
     height: 42px;
   }
@@ -4698,7 +4696,7 @@ span {
     padding: 30px 20px;
   }
 
-  .footer .container > p {
+  .footer__container > p {
     text-align: start;
   }
 
