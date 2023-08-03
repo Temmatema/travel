@@ -1,17 +1,18 @@
 .trainer {
   max-width: 278px;
-  height: 377px;
+  min-height: 377px;
   box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
   position: relative;
+  height: auto;
 
   @include vp-1199 {
     width: 206px;
-    height: 411px;
+    min-height: 411px;
   }
 
   @include vp-767 {
     min-width: 290px;
-    height: 386px;
+    min-height: 386px;
   }
 }
 

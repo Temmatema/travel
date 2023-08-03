@@ -52,7 +52,7 @@
         </header>
         <div class="entry swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="entry__slide swiper-slide">
               <h1>Захватывающие<br>вершины Кавказа</h1>
               <p>В сопровождении опытных гидов вы пройдете через потрясающие ландшафты и&nbsp;совершите восход на&nbsp;вершину горы Чегет.</p>
               <button class="btn entry__btn">Смотреть тур</button>
@@ -78,7 +78,9 @@
                   </svg>
                 </button>
                 <img src="img/video-preview.jpg" alt="Видео картинка." height="317" width="482">
+<!--
                 <iframe width="482" height="317" src="https://www.youtube.com/embed/9TZXsZItgdw" title="Бесплатные интерактивные онлайн-курсы" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+-->
               </div>
               <picture>
                 <source media="(max-width: 1199px)" srcset="img/header/slide1-tablet.jpg, img/header/slide1-tablet@2x.jpg 2x" width="768" height="1024">
@@ -86,7 +88,7 @@
                 <img src="img/header/slide1.png" alt="Природа." width="1440" height="800" srcset="img/header/slide1@2x.png 2x">
               </picture>
             </div>
-            <div class="swiper-slide">
+            <div class="entry__slide swiper-slide slide-secondary">
               <h1>Невероятная<br>природа Камчатки</h1>
               <p>Незабываемое приключение, во&nbsp;время которого вы отправитесь в&nbsp;путешествие по&nbsp;одному из&nbsp;самых нетронутых уголков дикой природы&nbsp;в&nbsp;мире.</p>
               <button class="btn entry__btn">Смотреть тур</button>
@@ -116,7 +118,7 @@
                 <img src="img/header/slide2.png" alt="Природа." width="1440" height="800" srcset="img/header/slide2@2x.png 2x">
               </picture>
             </div>
-            <div class="swiper-slide">
+            <div class="entry__slide swiper-slide slide-secondary">
               <h1>Магические пейзажи<br>Алтайского Края</h1>
               <p>Алтайский трекинг-тур – это&nbsp;захватывающее приключение с&nbsp;посещением магических и&nbsp;захватывающих дух ландшафтов Алтайских гор. </p>
               <button class="btn entry__btn">Смотреть тур</button>
@@ -968,14 +970,18 @@
                 <use xlink:href="img/sprite/logo.svg#logo-dark"/>
               </svg>
             </a>
-            <ul class="footer__list">
-              <li><a href="#tours">Туры</a></li>
-              <li class="item-1"><a href="#reviews">Отзывы</a></li>
-              <li><a href="#training">Обучение</a></li>
-              <li class="item-3"><a href="#gallery">Фотографии</a></li>
-              <li><a href="#about">О нас</a></li>
-              <li class="item-5"><a href="#contacts">Контакты</a></li>
-            </ul>
+            <div class="footer__list">
+              <div class="footer__inner-wrap">
+                <div><a href="#tours">Туры</a></div>
+                <div><a href="#training">Обучение</a></div>
+                <div><a href="#about">О нас</a></div>
+              </div>
+              <div class="footer__inner-wrap">
+                <div><a href="#reviews">Отзывы</a></div>
+                <div><a href="#gallery">Фотографии</a></div>
+                <div><a href="#contacts">Контакты</a></div>
+              </div>
+            </div>
             <a class="footer__phone" href="tel:+78007253232">8 800 725 32 32</a>
           </div>
           <ul class="social">

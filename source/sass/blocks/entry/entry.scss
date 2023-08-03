@@ -1,14 +1,4 @@
-.entry::before {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  content: none;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
 .entry.swiper {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -17,7 +7,8 @@
 }
 
 .entry .swiper-slide {
-  padding: 182px 120px 0;
+  padding: 182px 120px 80px;
+  height: auto;
 
   &::before {
     content: "";
@@ -25,20 +16,37 @@
     top: 0;
     left: 0;
     width: inherit;
-    height: inherit;
+    height: 100%;
     background-color: #000000;
     z-index: -2;
   }
 
+  &::after {
+    content: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 3;
+  }
+
   @include vp-1199 {
-    padding: 174px 45px 0;
+    padding: 174px 45px 218px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   @include vp-767 {
-    padding: 140px 15px 0;
+    padding: 140px 15px 172px;
+  }
+}
+
+.entry .slide-secondary {
+  @include vp-767 {
+    padding: 140px 15px 152px;
   }
 }
 
@@ -51,11 +59,7 @@
   width: 100%;
   max-width: none;
   object-fit: cover;
-  height: 800px;
-
-  @include vp-1199 {
-    height: 100%;
-  }
+  height: 100%;
 }
 
 .entry h1 {

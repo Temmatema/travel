@@ -5,6 +5,7 @@ const swiper = new Swiper('.tours__swiper', {
   speed: 300,
   direction: 'horizontal',
   spaceBetween: 30,
+  loop: true,
   slidesPerView: 1,
   navigation: {
     nextEl: '.tours__next-btn',

@@ -105,6 +105,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+  align-items: flex-end;
 
   &::before {
     content: "";
@@ -155,6 +156,7 @@
   }
 
   @media (max-width: 610px) {
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -162,7 +164,7 @@
     &::before {
       width: 1px;
       height: 196px;
-      top: 10px;
+      top: 14px;
       left: 10px;
     }
 
@@ -234,7 +236,10 @@
 }
 
 .training__item svg {
+  min-width: 25px;
+
   @media (max-width: 610px) {
+    min-width: auto;
     width: 19px;
     height: 19px;
   }

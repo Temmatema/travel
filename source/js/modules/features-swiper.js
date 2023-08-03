@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       spaceBetween: 30,
       slidesPerView: 3,
       initialSlide: 1,
+      loop: true,
       navigation: {
         nextEl: '.features__next-btn',
         prevEl: '.features__prev-btn',

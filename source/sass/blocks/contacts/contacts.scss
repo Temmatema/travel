@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   padding-top: 82px;
-  align-items: flex-end;
   padding-bottom: 104px;
   gap: 50px;
 
@@ -93,16 +92,17 @@
 .contacts__item {
   display: flex;
   gap: 30px;
-  align-items: center;
 
   @include vp-1199 {
     gap: 10px;
-    align-items: flex-start;
   }
 }
 
 .contacts__item svg {
+  margin-top: 14px;
+
   @include vp-1199 {
+    margin-top: 0;
     width: 24px;
     height: 24px;
   }

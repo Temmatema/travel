@@ -4,6 +4,7 @@
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: 75px;
 
   span {
     color: #000000;
@@ -12,6 +13,7 @@
   @include vp-1199 {
     width: 100%;
     height: 340px;
+    margin-top: 0;
   }
 
   @include vp-767 {

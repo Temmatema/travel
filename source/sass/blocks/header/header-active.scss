@@ -43,6 +43,8 @@
   }
 }
 
-.header.is-active + .entry::before {
-  content: "";
+.entry.is-active .entry__slide {
+  &::after {
+    content: "";
+  }
 }
