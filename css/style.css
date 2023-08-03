@@ -1631,10 +1631,8 @@ button {
 
 .wrapper > .container {
   position: relative;
-  min-height: 800px;
   z-index: -2;
-  padding-top: 40px;
-  padding-bottom: 80px;
+  padding: 0;
 }
 
 .header {
@@ -1674,6 +1672,7 @@ button {
   line-height: 1;
   -webkit-transition: color 0.1s ease;
   transition: color 0.1s ease;
+  white-space: nowrap;
 }
 
 .header__phone:hover {
@@ -1732,7 +1731,7 @@ button {
   color: #2d383f;
 }
 
-.header.is-active + .entry::before {
+.entry.is-active .entry__slide::after {
   content: "";
 }
 
@@ -1741,6 +1740,8 @@ button {
   display: -ms-flexbox;
   display: flex;
   gap: 1.97rem;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .nav__link {
@@ -1792,6 +1793,7 @@ button {
   background-color: #ffffff;
   position: absolute;
   left: 0;
+  z-index: -1;
 }
 
 .bar__row-2 {
@@ -1803,17 +1805,7 @@ button {
   bottom: 5px;
 }
 
-.entry::before {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  content: none;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
 .entry.swiper {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -1822,7 +1814,8 @@ button {
 }
 
 .entry .swiper-slide {
-  padding: 182px 120px 0;
+  padding: 182px 120px 80px;
+  height: auto;
 }
 
 .entry .swiper-slide::before {
@@ -1831,9 +1824,20 @@ button {
   top: 0;
   left: 0;
   width: inherit;
-  height: inherit;
+  height: 100%;
   background-color: #000000;
   z-index: -2;
+}
+
+.entry .swiper-slide::after {
+  content: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 3;
 }
 
 .entry img {
@@ -1846,7 +1850,7 @@ button {
   max-width: none;
   -o-object-fit: cover;
   object-fit: cover;
-  height: 800px;
+  height: 100%;
 }
 
 .entry h1 {
@@ -2176,6 +2180,9 @@ button {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 53px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .tours__inner-wrap button {
@@ -2497,6 +2504,9 @@ button {
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .training__list::before {
@@ -2544,6 +2554,10 @@ button {
   margin: 0;
 }
 
+.training__item svg {
+  min-width: 25px;
+}
+
 .item-mountain {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
@@ -2564,10 +2578,11 @@ button {
 
 .trainer {
   max-width: 278px;
-  height: 377px;
+  min-height: 377px;
   -webkit-box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
   box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
   position: relative;
+  height: auto;
 }
 
 .trainer__wrap {
@@ -2780,7 +2795,7 @@ button {
 
 .review {
   width: 790px;
-  height: 293px;
+  min-height: 293px;
 }
 
 .review__img {
@@ -2796,6 +2811,7 @@ button {
   -webkit-box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   gap: 30px;
+  height: 100%;
 }
 
 .review__content {
@@ -2880,6 +2896,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -2987,9 +3004,9 @@ button {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .gallery p {
@@ -3007,6 +3024,7 @@ button {
   -ms-flex-align: center;
   align-items: center;
   gap: 5px;
+  padding-bottom: 5px;
 }
 
 .gallery .swiper-slide {
@@ -3184,9 +3202,6 @@ button {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding-top: 82px;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
   padding-bottom: 104px;
   gap: 50px;
 }
@@ -3244,9 +3259,10 @@ button {
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+}
+
+.contacts__item svg {
+  margin-top: 14px;
 }
 
 .contacts__item b {
@@ -3290,6 +3306,7 @@ button {
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: 75px;
 }
 
 .map span {
@@ -3325,9 +3342,6 @@ button {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   margin-bottom: 15px;
 }
 
@@ -3341,6 +3355,18 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 33px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.footer__inner-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 33px;
 }
 
@@ -3380,6 +3406,13 @@ button {
   line-height: 18px;
   -webkit-transition: color 0.1s ease;
   transition: color 0.1s ease;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .footer__phone:hover {
@@ -3393,24 +3426,6 @@ button {
 
 .footer__phone:active {
   color: #0266c1;
-}
-
-.item-1 {
-  -webkit-box-ordinal-group: 4;
-  -ms-flex-order: 3;
-  order: 3;
-}
-
-.item-3 {
-  -webkit-box-ordinal-group: 5;
-  -ms-flex-order: 4;
-  order: 4;
-}
-
-.item-5 {
-  -webkit-box-ordinal-group: 6;
-  -ms-flex-order: 5;
-  order: 5;
 }
 
 .social {
@@ -3483,10 +3498,6 @@ button {
     padding: 0 45px;
   }
 
-  .wrapper > .container {
-    min-height: 1024px;
-  }
-
   .header {
     padding: 40px 45px 0;
   }
@@ -3521,7 +3532,8 @@ button {
     left: 0;
     width: 100%;
     top: 0;
-    z-index: -1;
+    z-index: -2;
+    padding-top: 100px;
   }
 
   .nav__list {
@@ -3529,7 +3541,7 @@ button {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 122px 45px 65px;
+    padding: 22px 45px 65px;
     gap: 18px;
   }
 
@@ -3554,7 +3566,7 @@ button {
   }
 
   .entry .swiper-slide {
-    padding: 174px 45px 0;
+    padding: 174px 45px 218px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3565,10 +3577,6 @@ button {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-  }
-
-  .entry img {
-    height: 100%;
   }
 
   .entry h1 {
@@ -3785,7 +3793,7 @@ button {
 
   .trainer {
     width: 206px;
-    height: 411px;
+    min-height: 411px;
   }
 
   .trainer__wrap {
@@ -3858,7 +3866,7 @@ button {
 
   .review {
     width: 560px;
-    height: 277px;
+    min-height: 277px;
   }
 
   .review__wrap {
@@ -3892,7 +3900,7 @@ button {
   }
 
   .features .container {
-    padding-top: 89px;
+    padding-top: 88px;
     padding-bottom: 59px;
   }
 
@@ -3974,6 +3982,10 @@ button {
     font-size: 14px;
     line-height: 22px;
     max-width: 385px;
+  }
+
+  .gallery__buttons {
+    padding-bottom: 17px;
   }
 
   .gallery .swiper-slide {
@@ -4095,12 +4107,10 @@ button {
 
   .contacts__item {
     gap: 10px;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
   }
 
   .contacts__item svg {
+    margin-top: 0;
     width: 24px;
     height: 24px;
   }
@@ -4127,6 +4137,7 @@ button {
   .map {
     width: 100%;
     height: 340px;
+    margin-top: 0;
   }
 
   .footer .container {
@@ -4151,6 +4162,10 @@ button {
     gap: 21px;
   }
 
+  .footer__inner-wrap {
+    gap: 21px;
+  }
+
   .footer__list a {
     font-size: 14px;
     line-height: 14px;
@@ -4168,10 +4183,6 @@ button {
 @media (max-width: 767px) {
   .container {
     padding: 0 15px;
-  }
-
-  .wrapper > .container {
-    min-height: 568px;
   }
 
   .header {
@@ -4210,9 +4221,13 @@ button {
     text-align: right;
   }
 
+  .nav {
+    padding-top: 80px;
+  }
+
   .nav__list {
-    padding: 95px 15px 44px;
-    gap: 12px;
+    padding: 13px 15px 46px;
+    gap: 11px;
   }
 
   .nav__link {
@@ -4221,7 +4236,11 @@ button {
   }
 
   .entry .swiper-slide {
-    padding: 140px 15px 0;
+    padding: 140px 15px 172px;
+  }
+
+  .entry .slide-secondary {
+    padding: 140px 15px 152px;
   }
 
   .entry h1 {
@@ -4284,9 +4303,9 @@ button {
   }
 
   .tours__inner-wrap {
-    -webkit-box-align: self-start;
-    -ms-flex-align: self-start;
-    align-items: self-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     margin-bottom: 26px;
   }
 
@@ -4400,7 +4419,7 @@ button {
 
   .trainer {
     min-width: 290px;
-    height: 386px;
+    min-height: 386px;
   }
 
   .trainer__wrap {
@@ -4507,7 +4526,7 @@ button {
   }
 
   .features .container {
-    padding-top: 67px;
+    padding-top: 32px;
   }
 
   .features .swiper-wrapper {
@@ -4586,6 +4605,10 @@ button {
   .gallery p {
     font-size: 12px;
     line-height: 18px;
+  }
+
+  .gallery__buttons {
+    padding-bottom: 0;
   }
 
   .gallery .swiper-slide {
@@ -4718,33 +4741,19 @@ button {
 
   .footer__list {
     padding-right: 0;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
-    row-gap: 5px;
+    gap: 80px;
     width: 100%;
   }
 
-  .item-1 {
-    -webkit-box-ordinal-group: initial;
-    -ms-flex-order: initial;
-    order: initial;
-  }
-
-  .item-3 {
-    -webkit-box-ordinal-group: initial;
-    -ms-flex-order: initial;
-    order: initial;
-  }
-
-  .item-5 {
-    -webkit-box-ordinal-group: initial;
-    -ms-flex-order: initial;
-    order: initial;
+  .footer__inner-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 5px;
   }
 
   .social {
@@ -4757,6 +4766,9 @@ button {
 
 @media (max-width: 610px) {
   .training__list {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4770,7 +4782,7 @@ button {
   .training__list::before {
     width: 1px;
     height: 196px;
-    top: 10px;
+    top: 14px;
     left: 10px;
   }
 
@@ -4799,6 +4811,7 @@ button {
   }
 
   .training__item svg {
+    min-width: auto;
     width: 19px;
     height: 19px;
   }
