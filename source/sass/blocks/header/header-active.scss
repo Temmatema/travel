@@ -48,3 +48,13 @@
     content: "";
   }
 }
+
+body.is-active {
+  overflow: hidden;
+}
+
+body.is-active main{
+  &::before {
+    content: "";
+  }
+}

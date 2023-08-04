@@ -76,7 +76,7 @@
 }
 
 .form__wrap > div {
-  @media (max-width: 550px) {
+  @include vp-767 {
     width: 100%;
   }
 }
