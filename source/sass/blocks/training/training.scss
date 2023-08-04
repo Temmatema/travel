@@ -10,23 +10,27 @@
   padding: 35px 20px;
   overflow: hidden;
   margin-bottom: 16px;
-  max-width: 1420px;
+  max-width: 1440px;
+  width: 100%;
 
   @media (max-width: 1600px) {
     max-width: 1240px;
-    width: 86.11vw;
   }
 
   @include vp-1199 {
-    padding: 24px 20px;
-    width: 720px;
+    padding: 24px 45px;
+    width: 100%;
     margin-bottom: 19px;
   }
 
   @include vp-767 {
-    width: 320px;
+    width: 70%;
     padding: 24px 15px;
     margin-bottom: 14px;
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
   }
 }
 
