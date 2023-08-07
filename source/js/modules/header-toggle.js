@@ -4,13 +4,13 @@ const entry = document.querySelector('.entry');
 const headerIcon = document.querySelector('.header-icon');
 const nav = document.querySelector('.nav__list');
 const links = document.querySelectorAll('.nav__link');
-const body = document.querySelector('body');
+const wrapper = document.querySelector('.wrapper');
 
 if (barBtn && header && headerIcon) {
   barBtn.addEventListener('click', () => {
     header.classList.toggle('is-active');
     entry.classList.toggle('is-active');
-    body.classList.toggle('is-active');
+    wrapper.classList.toggle('is-active');
 
     switchLogo();
   });
@@ -30,7 +30,7 @@ document.addEventListener('click', (e) => {
   if (!nav.contains(e.target) && e.target !== barBtn) {
     header.classList.remove('is-active');
     entry.classList.remove('is-active');
-    body.classList.remove('is-active');
+    wrapper.classList.remove('is-active');
     headerIcon.setAttribute('xlink:href', 'img/sprite/logo.svg#logo-light');
   }
 });
@@ -39,7 +39,7 @@ links.forEach((el) => {
   el.addEventListener('click', () => {
     header.classList.remove('is-active');
     entry.classList.remove('is-active');
-    body.classList.remove('is-active');
+    wrapper.classList.remove('is-active');
     headerIcon.setAttribute('xlink:href', 'img/sprite/logo.svg#logo-light');
   });
 });

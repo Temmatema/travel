@@ -1,4 +1,10 @@
 .header.is-active {
+  height: 338px;
+
+  &::before {
+    content: '';
+  }
+
   .nav {
     display: block;
   }
@@ -43,18 +49,25 @@
   }
 }
 
-.entry.is-active .entry__slide {
-  &::after {
+.wrapper.is-active main {
+  &::before {
     content: "";
   }
 }
 
-body.is-active {
-  overflow: hidden;
+.wrapper.is-active > .inner-wrap {
+  height: 0;
 }
 
-body.is-active main{
-  &::before {
-    content: "";
+.wrapper.is-active > .container {
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 }
